@@ -54,7 +54,7 @@ Technologies used in the project:
 
 1. Clone the repository
 ```bash
-git clone <repository-url>      
+git clone https://github.com/Raviast/Projext_passop    
 cd passop
 ```
 2. Install dependencies
