@@ -2,6 +2,8 @@
 
 # PassOp - Secure Password Manager
 
+![Projext_passop](https://socialify.git.ci/Raviast/Projext_passop/image?font=Bitter&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Auto)
+
 A modern, secure password management solution built with React, Tailwind CSS, MongoDB, and Express.
 
 ## Overview
@@ -12,14 +14,23 @@ PassOp is a web-based password manager that helps users securely store and manag
 
 - 🔐 Secure password storage with encryption
 - 🎯 Intuitive user interface
-- 🔄 Password generator
-- 🔍 Quick search functionality
 - 📱 Responsive design
-- 👥 User authentication
 - 🗂️ Password organization
-- 🔒 Auto-logout for security
+
+<h2>🚀 Demo</h2>
+
+[https://drive.google.com/file/d/14FjPDTOmsmf7fzlGecqfVXRD\_QApfkB2/view?usp=sharing](https://drive.google.com/file/d/14FjPDTOmsmf7fzlGecqfVXRD_QApfkB2/view?usp=sharing)
+
+    
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
 
 ## Technology Stack
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
 
 ### Frontend
 - React + Vite
@@ -45,40 +56,18 @@ PassOp is a web-based password manager that helps users securely store and manag
 ```bash
 git clone <repository-url>      
 cd passop
-
+```
+2. Install dependencies
+```
 npm install
-MONGODB_URI=your_mongodb_connection_string
+```
+3. Start Development Server
+```
+npm run dev
+```
 
-npm run dev
-passop/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── context/
-│   ├── utils/
-│   └── App.jsx
-├── public/
-├── server/
-└── package.json
-npm run test
-npm run build
-npm install
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5000
-npm run dev
-passop/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── context/
-│   ├── utils/
-│   └── App.jsx
-├── public/
-├── server/
-└── package.json
-npm run test
-npm run build
+## Project Structure
+```
 passop/
 ├── src/
 │   ├── components/        # Reusable UI components
@@ -89,22 +78,22 @@ passop/
 ├── public/              # Static assets
 ├── server/             # Backend server code
 └── package.json        # Project dependencies and scripts
+```
 
-passop/
-├── src/
-│   ├── components/        # Reusable UI components
-│   ├── pages/            # Route components/pages
-│   ├── context/          # React context providers
-│   ├── utils/            # Helper functions and utilities
-│   └── App.jsx          # Main application component
-├── public/              # Static assets
-├── server/             # Backend server code
-└── package.json        # Project dependencies and scripts
-npm run dev    # Start development server
+### Available Scripts
+```npm run dev    # Start development server
 npm run test   # Run test suites
 npm run build  # Create production build
+```
 
-npm run test
-npm run build
+## Contributing
+1. Fork the repository
 
+2. Create a feature branch
+
+3. Commit your changes
+
+4. Push to the branch
+
+5. Open a Pull Request
 
