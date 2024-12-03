@@ -6,6 +6,20 @@
 
 A modern, secure password management solution built with React, Tailwind CSS, MongoDB, and Express.
 
+## Table of Contents
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Project  Demo](#project-demo)
+- [Project Screenshots](#project-screenshots)
+- [Technology Stack](#technology-stack)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
 ## Overview
 
 PassOp is a web-based password manager that helps users securely store and manage their passwords. With a focus on security and user experience, it provides an intuitive interface for organizing and accessing your credentials safely.
@@ -17,17 +31,24 @@ PassOp is a web-based password manager that helps users securely store and manag
 - 📱 Responsive design
 - 🗂️ Password organization
 
-<h2>🚀 Demo</h2>
+## Project 🚀 Demo
 
-[https://drive.google.com/file/d/14FjPDTOmsmf7fzlGecqfVXRD\_QApfkB2/view?usp=sharing](https://drive.google.com/file/d/14FjPDTOmsmf7fzlGecqfVXRD_QApfkB2/view?usp=sharing)
+[https://res.cloudinary.com/do9zaevax/video/upload/v1733088986/pass_op/rvy3jxrfzgcgjzn8cnkb.mp4?usp=sharing](https://res.cloudinary.com/do9zaevax/video/upload/v1733088986/pass_op/rvy3jxrfzgcgjzn8cnkb.mp4?usp=sharing)
 
+
+<video width="420" height="340" controls>
+  <source src="https://res.cloudinary.com/do9zaevax/video/upload/v1733088986/pass_op/rvy3jxrfzgcgjzn8cnkb.mp4" type="video/mp4">
+  <source src="https://res.cloudinary.com/do9zaevax/video/upload/v1733088986/pass_op/rvy3jxrfzgcgjzn8cnkb.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+## Project Screenshots
+
+<img src="https://res.cloudinary.com/do9zaevax/image/upload/v1733087431/r89mwjzfwbzqbt9rtekb.png" alt="project-screenshot">
+
+<img src="https://res.cloudinary.com/do9zaevax/image/upload/v1733087430/hkvvvtdc7qr6bkis8c2l.png" alt="project-screenshot">
     
-<h2>💻 Built with</h2>
-
-Technologies used in the project:
-
-## Technology Stack
-<h2>💻 Built with</h2>
+## <h2>💻 Built with</h2>
 
 Technologies used in the project:
 
@@ -97,3 +118,9 @@ npm run build  # Create production build
 
 5. Open a Pull Request
 
+
+## License
+ This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+ - Thanks to all contributors and supporters

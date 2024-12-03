@@ -43,8 +43,8 @@ const Manager = () => {
 
     const savePassword = () => {
         // alert("Save the password")
-        if (form.site.length > 3 && form.username.length >3 && form.password.length > 3) {
-            
+        if (form.site.length > 3 && form.username.length > 3 && form.password.length > 3) {
+
             setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
             localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...form, id: uuidv4() }]))
             console.log([...passwordArray, form]);
@@ -74,8 +74,8 @@ const Manager = () => {
     }
 
     const deletePassword = (id) => {
-        console.log("Deleting password with id ",id);
-        
+        console.log("Deleting password with id ", id);
+
         let c = confirm("Do you really want to delete this password?")
         if (c) {
             setPasswordArray(passwordArray.filter(item => item.id !== id))
@@ -94,9 +94,9 @@ const Manager = () => {
         }
     }
 
-    const editPassword = (id)=>{
+    const editPassword = (id) => {
         console.log("Editing password with id ", id);
-        
+
         setform(passwordArray.filter(item => item.id === id)[0])
         setPasswordArray(passwordArray.filter(item => item.id !== id))
     }
@@ -151,7 +151,7 @@ const Manager = () => {
                     <input value={form.site} onChange={handleChange} placeholder='Enter website URL' className='rounded-full border border-green-500 w-full p-4 py-1' type="text" name='site' id='site' />
                     <div className='flex flex-col md:flex-row w-full justify-between gap-8'>
                         <input value={form.username} onChange={handleChange} placeholder='Enter Username' className='rounded-full border border-green-500 w-full p-4 py-1' type="text" name='username' id='username' />
-                        <div className="relative">  
+                        <div className="relative">
                             <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder='Enter Password' className='rounded-full border border-green-500 w-full p-4 py-1' type="password" name='password' id='password' />
                             <span className='absolute right-[3px] top-[3px] cursor-pointer' onClick={showPassword}>
                                 <img ref={ref} width={28} className='p-1' src="icons/eye.png" alt="open_eye" />
@@ -170,7 +170,7 @@ const Manager = () => {
                 <div className="passwords">
                     <h2 className='font-bold text-2xl py-4'>Your Passwords</h2>
                     {passwordArray.length === 0 && <div>No passwords to show </div>}
-                    {passwordArray.length !== 0 && <table className="table-auto w-full rounded-md overflow-hidden mb-8">
+                    {/* {passwordArray.length !== 0 && <table className="table-auto md:w-full w-fit rounded-md overflow-hidden mb-8">
                         <thead className='bg-green-800 text-white'>
                             <tr>
                                 <th className='py-2'>Site</th>
@@ -232,7 +232,99 @@ const Manager = () => {
                                 </tr>
                             })}
                         </tbody>
-                    </table>}
+                    </table>} */}
+                    {passwordArray.length !== 0 && <div className="overflow-x-auto">
+                        <table className="table-auto w-full max-w-screen-lg mx-auto rounded-md overflow-hidden mb-8">
+                            <thead className="bg-green-800 text-white">
+                                <tr>
+                                    <th className="py-2 px-4 text-sm md:text-base">Site</th>
+                                    <th className="py-2 px-4 text-sm md:text-base">Username</th>
+                                    <th className="py-2 px-4 text-sm md:text-base">Password</th>
+                                    <th className="py-2 px-4 text-sm md:text-base">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody className="bg-green-100">
+                                {passwordArray.map((item, index) => (
+                                    <tr key={index} className="text-xs md:text-sm">
+                                        <td className="py-2 px-4 border border-white text-center">
+                                            <div className="flex flex-col md:flex-row justify-center items-center gap-2">
+                                                <a href={item.site} target="_blank" className="text-blue-500 underline">
+                                                    {item.site}
+                                                </a>
+                                                <div
+                                                    className="sl-button size-7"
+                                                    onClick={() => copyText(item.site)}
+                                                >
+                                                    <sl-copy-button
+                                                        style={{ width: "25px", height: "25px", paddingTop: "5px", paddingLeft: "3px" }}
+                                                        value={item.site}
+                                                        copy-label="Click to copy"
+                                                        success-label="You did it!"
+                                                        error-label="Whoops, your browser doesn't support this!"
+                                                    ></sl-copy-button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="py-2 px-4 border border-white text-center">
+                                            <div className="flex flex-col md:flex-row justify-center items-center gap-2">
+                                                <span>{item.username}</span>
+                                                <div
+                                                    className="sl-button size-7"
+                                                    onClick={() => copyText(item.username)}
+                                                >
+                                                    <sl-copy-button
+                                                        style={{ width: "25px", height: "25px", paddingTop: "5px", paddingLeft: "3px" }}
+                                                        value={item.username}
+                                                        copy-label="Click to copy"
+                                                        success-label="You did it!"
+                                                        error-label="Whoops, your browser doesn't support this!"
+                                                    ></sl-copy-button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="py-2 px-4 border border-white text-center">
+                                            <div className="flex flex-col md:flex-row justify-center items-center gap-2">
+                                                <span>{"*".repeat(item.password.length)}</span>
+                                                <div
+                                                    className="sl-button size-7"
+                                                    onClick={() => copyText(item.password)}
+                                                >
+                                                    <sl-copy-button
+                                                        style={{ width: "25px", height: "25px", paddingTop: "5px", paddingLeft: "3px" }}
+                                                        value={item.password}
+                                                        copy-label="Click to copy"
+                                                        success-label="You did it!"
+                                                        error-label="Whoops, your browser doesn't support this!"
+                                                    ></sl-copy-button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className="py-2 px-4 border border-white text-center">
+                                            <div className="flex justify-center items-center gap-2">
+                                                <span onClick={() => editPassword(item.id)}>
+                                                    <img
+                                                        width={28}
+                                                        className="p-1 cursor-pointer hover:scale-125"
+                                                        src="icons/edit-button.png"
+                                                        alt="Edit Button"
+                                                    />
+                                                </span>
+                                                <span onClick={() => deletePassword(item.id)}>
+                                                    <img
+                                                        width={28}
+                                                        className="p-1 cursor-pointer hover:scale-125"
+                                                        src="icons/bin.png"
+                                                        alt="Delete Button"
+                                                    />
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    }
                 </div>
             </div>
         </>
