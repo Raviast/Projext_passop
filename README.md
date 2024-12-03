@@ -123,4 +123,8 @@ npm run build  # Create production build
  This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
+<<<<<<< HEAD
  - Thanks to all contributors and supporters
+=======
+ - Thanks to all contributors and supporters
+>>>>>>> f23a6287b83f022aff5b4ea5d17a28e932d0597e
